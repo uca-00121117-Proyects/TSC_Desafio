@@ -17,12 +17,13 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class _10_MEF8Controller implements Initializable {
+    fxmlvalues fxmlp = fxmlvalues._9;
+    String fxmlprev = fxmlp.getdatos();
     fxmlvalues fxmlt = fxmlvalues._10;
     String fxmlthis = fxmlt.getdatos();
     fxmlvalues fxml = fxmlvalues._11;
     String fxmlnext = fxml.getdatos();
-    fxmlvalues fxmlp = fxmlvalues._9;
-    String fxmlprev = fxmlp.getdatos();
+
 
     @FXML
     public ImageView closeimg;

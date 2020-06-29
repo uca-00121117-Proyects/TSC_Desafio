@@ -17,12 +17,13 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class _11_DespedidaController implements Initializable {
+    fxmlvalues fxmlp = fxmlvalues._10;
+    String fxmlprev = fxmlp.getdatos();
     fxmlvalues fxmlt = fxmlvalues._11;
     String fxmlthis = fxmlt.getdatos();
     fxmlvalues fxml = fxmlvalues._1;
     String fxmlnext = fxml.getdatos();
-    fxmlvalues fxmlp = fxmlvalues._10;
-    String fxmlprev = fxmlp.getdatos();
+
 
     @FXML
     public ImageView closeimg;

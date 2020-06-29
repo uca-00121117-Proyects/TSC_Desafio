@@ -17,13 +17,12 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class _5_MallaController implements Initializable {
+    fxmlvalues fxmlp = fxmlvalues._4;
+    String fxmlprev = fxmlp.getdatos();
     fxmlvalues fxmlt = fxmlvalues._5;
     String fxmlthis = fxmlt.getdatos();
     fxmlvalues fxml = fxmlvalues._6;
     String fxmlnext = fxml.getdatos();
-    fxmlvalues fxmlp = fxmlvalues._5;
-    String fxmlprev = fxmlp.getdatos();
-
     @FXML
     public ImageView closeimg;
     @FXML

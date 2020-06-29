@@ -21,7 +21,7 @@ public class _6_TablaController implements Initializable {
     String fxmlthis = fxmlt.getdatos();
     fxmlvalues fxml = fxmlvalues._7;
     String fxmlnext = fxml.getdatos();
-    fxmlvalues fxmlp = fxmlvalues._8;
+    fxmlvalues fxmlp = fxmlvalues._5;
     String fxmlprev = fxmlp.getdatos();
 
     @FXML

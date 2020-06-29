@@ -17,12 +17,13 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class _9_EnsamblajeController implements Initializable {
+    fxmlvalues fxmlp = fxmlvalues._8;
+    String fxmlprev = fxmlp.getdatos();
     fxmlvalues fxmlt = fxmlvalues._9;
     String fxmlthis = fxmlt.getdatos();
     fxmlvalues fxml = fxmlvalues._10;
     String fxmlnext = fxml.getdatos();
-    fxmlvalues fxmlp = fxmlvalues._8;
-    String fxmlprev = fxmlp.getdatos();
+
 
     @FXML
     public ImageView closeimg;

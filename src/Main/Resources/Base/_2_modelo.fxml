@@ -5,30 +5,54 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.Controller._2_ModelController">
+<AnchorPane prefHeight="720.0" prefWidth="1198.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.Controller._2_ModelController">
     <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="505.0" prefWidth="1198.0" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="179.0" prefWidth="1194.0" text="Para Comenzar a Aprender de simulacion necesitamos un modelo." textAlignment="JUSTIFY" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="174.0" fitWidth="419.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/App/modelo.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="126.0" prefHeight="179.0" prefWidth="1194.0" text="En nuestro modelo A y B son escalares " textAlignment="JUSTIFY" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
       <AnchorPane layoutX="28.0" layoutY="10.0" prefHeight="48.0" prefWidth="504.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="68.0" layoutY="15.0" prefHeight="18.0" prefWidth="76.0" text="Modelo" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="68.0" layoutY="15.0" prefHeight="98.0" prefWidth="1198.0" text="Modelo" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <font>
-                  <Font size="29.0" />
+                  <Font size="55.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-        <ImageView fx:id="closeimg" fitHeight="28.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+        <ImageView fx:id="closeimg" fitHeight="73.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
             <image>
                 <Image url="@../images/icons/exit.png" />
             </image>
         </ImageView>
-      <AnchorPane layoutY="352.0" prefHeight="48.0" prefWidth="504.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <AnchorPane layoutY="352.0" prefHeight="80.0" prefWidth="600.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="-5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <ImageView fx:id="nextimg" fitHeight="28.0" fitWidth="56.0" layoutX="558.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+            
+            <ImageView fx:id="nextimg" fitHeight="100.0" fitWidth="80.0" layoutX="1070.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
                <image>
                   <Image url="@../images/icons/siguiente.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="previmg" fitHeight="40.0" fitWidth="28.0" layoutX="19.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+            <ImageView fx:id="previmg" fitHeight="100.0" fitWidth="80.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="8.0">
                <image>
                   <Image url="@../images/icons/anterior.png" />
                </image>

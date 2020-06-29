@@ -17,13 +17,12 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class _2_ModelController implements Initializable {
+    fxmlvalues fxmlp = fxmlvalues._1;
+    String fxmlprev = fxmlp.getdatos();
     fxmlvalues fxmlt = fxmlvalues._2;
     String fxmlthis = fxmlt.getdatos();
     fxmlvalues fxml = fxmlvalues._3;
     String fxmlnext = fxml.getdatos();
-    fxmlvalues fxmlp = fxmlvalues._1;
-    String fxmlprev = fxmlp.getdatos();
-
     @FXML
     public ImageView closeimg;
     @FXML

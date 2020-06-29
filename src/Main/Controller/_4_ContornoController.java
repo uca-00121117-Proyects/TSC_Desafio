@@ -19,13 +19,12 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class _4_ContornoController implements Initializable {
+    fxmlvalues fxmlp = fxmlvalues._3;
+    String fxmlprev = fxmlp.getdatos();
     fxmlvalues fxmlt = fxmlvalues._4;
     String fxmlthis = fxmlt.getdatos();
     fxmlvalues fxml = fxmlvalues._5;
     String fxmlnext = fxml.getdatos();
-    fxmlvalues fxmlp = fxmlvalues._3;
-    String fxmlprev = fxmlp.getdatos();
-
     @FXML
     public ImageView closeimg;
     @FXML
