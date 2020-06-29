@@ -32,7 +32,7 @@
                      <Insets bottom="30.0" />
                   </padding>
                </Label>
-               <Button fx:id="next" mnemonicParsing="false" onAction="#nextScene" style="-fx-background-color: none;" text="Comenzar" textFill="WHITE">
+               <Button id="botonmenu" fx:id="next" mnemonicParsing="false" onAction="#nextScene"  text="Comenzar" textFill="WHITE">
                   <font>
                      <Font size="22.0" />
                   </font></Button>

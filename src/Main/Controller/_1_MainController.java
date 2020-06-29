@@ -31,6 +31,7 @@ public class _1_MainController implements Initializable {
         Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("/Main/Resources/fxml/"+fxmlthis+".fxml"));
         Scene scene = new Scene(root, Values.AppWidht(), Values.AppHeight());
+        scene.getStylesheets().add("/Main/Resources/css/style.css");
         stage.setScene(scene);
     }
 

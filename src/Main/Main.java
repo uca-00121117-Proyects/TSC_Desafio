@@ -24,7 +24,9 @@ public class Main extends Application {
         System.out.println(fxmlthis);
         Parent root = FXMLLoader.load(getClass().getResource("Resources/fxml/"+ fxmlthis+".fxml"));
         index.initStyle(StageStyle.UNDECORATED);
-        index.setScene(new Scene(root, Values.AppWidht(), Values.AppHeight()));
+        Scene scene =new Scene(root, Values.AppWidht(), Values.AppHeight());
+        scene.getStylesheets().add("/Main/Resources/css/style.css");
+        index.setScene(scene);
         index.setResizable(false);
         index.show();
     }
@@ -44,3 +46,8 @@ public class Main extends Application {
 //https://www.youtube.com/watch?v=5_v58NRTOTM
 //https://www.quora.com/How-do-I-set-size-of-a-image-inside-button-in-javafx-Is-it-possible-to-do-this-in-css
 //https://www.google.com/search?q=off+icon&client=firefox-b-d&sxsrf=ALeKk02GIDFEWMrfvEB02L2Gs3ahmRW5XQ:1593416027278&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj33qOiwabqAhVlUt8KHSa9D3AQ_AUoAXoECBYQAw&biw=1366&bih=622#imgrc=w_lpsjK2ICa52M
+//https://stackoverflow.com/questions/30680570/javafx-button-border-and-hover
+//https://stackoverflow.com/questions/36936125/javafx-css-id-selector-with-class-selector-not-working
+
+
+

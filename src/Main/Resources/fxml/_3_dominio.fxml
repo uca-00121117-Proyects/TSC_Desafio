@@ -5,28 +5,28 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1198.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.Controller._3_DomainController">
+<AnchorPane fx:id="panel" prefHeight="720.0" prefWidth="1198.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.Controller._3_DomainController">
     <children>
-      <AnchorPane prefHeight="200.0" prefWidth="412.0" style="-fx-background-color: #212121;" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="98.0">
+      <AnchorPane id="dominio" fx:id="dominio" prefHeight="200.0" prefWidth="412.0" style="-fx-background-color: #212121;" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="98.0">
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <Button fx:id="primero" mnemonicParsing="false" onAction="#primerAct" prefHeight="70.0" prefWidth="412.0" style="-fx-background-color: #484848;" text="Rojo" textFill="WHITE">
+                  <Button id="botonmenu" fx:id="primero" mnemonicParsing="false" onAction="#primerAct" prefHeight="70.0" prefWidth="412.0" text="Dominio" textFill="WHITE">
                      <font>
                         <Font size="42.0" />
                      </font>
                   </Button>
-                  <Button fx:id="segundo" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#segundaAct" prefHeight="70.0" prefWidth="412.0" style="-fx-background-color: #484848;" text="Verde" textFill="WHITE">
+                  <Button id="botonmenu"  fx:id="segundo" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#segundaAct" prefHeight="70.0" prefWidth="412.0" text="Vista" textFill="WHITE">
                      <font>
                         <Font size="42.0" />
                      </font>
                   </Button>
-                  <Button fx:id="tercero" layoutX="10.0" layoutY="98.0" mnemonicParsing="false" onAction="#tercerAct" prefHeight="70.0" prefWidth="412.0" style="-fx-background-color: #484848;" text="Negro" textFill="WHITE">
+                  <Button id="botonmenu" fx:id="tercero" layoutX="10.0" layoutY="98.0" mnemonicParsing="false" onAction="#tercerAct" prefHeight="70.0" prefWidth="412.0" text="Malla" textFill="WHITE">
                      <font>
                         <Font size="42.0" />
                      </font>
                   </Button>
-                  <Button fx:id="cuarto" layoutX="10.0" layoutY="186.0" mnemonicParsing="false" onAction="#cuartaAct" prefHeight="70.0" prefWidth="412.0" style="-fx-background-color: #484848;" text="B" textFill="WHITE">
+                  <Button id="botonmenu" fx:id="cuarto" layoutX="10.0" layoutY="186.0" mnemonicParsing="false" onAction="#cuartaAct" prefHeight="70.0" prefWidth="412.0" text="F" textFill="WHITE">
                      <font>
                         <Font size="42.0" />
                      </font>

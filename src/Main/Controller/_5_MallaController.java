@@ -45,6 +45,7 @@ public class _5_MallaController implements Initializable {
                 ioException.printStackTrace();
             }
             Scene scene = new Scene(root, Values.AppWidht(), Values.AppHeight());
+            scene.getStylesheets().add("/Main/Resources/css/style.css");
             stage.setScene(scene);
         });
         previmg.setOnMouseClicked((MouseEvent e) ->{
@@ -56,6 +57,7 @@ public class _5_MallaController implements Initializable {
                 ioException.printStackTrace();
             }
             Scene scene = new Scene(root, Values.AppWidht(), Values.AppHeight());
+            scene.getStylesheets().add("/Main/Resources/css/style.css");
             stage.setScene(scene);
         });
         closeimg.setOnMouseClicked((MouseEvent e) ->{

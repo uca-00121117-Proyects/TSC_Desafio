@@ -2,6 +2,7 @@ package Main.Controller;
 
 import Main.Resources.Values.Values;
 import Main.Resources.Values.fxmlvalues;
+import Main.Resources.Values.retweet;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -33,34 +34,10 @@ public class _2_ModelController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("************       "+ fxmlthis+"      **************");
-        System.out.println("Next : "+ fxmlnext);
-        System.out.println("Prev : "+ fxmlprev);
-        nextimg.setOnMouseClicked((MouseEvent e) ->{
-            Stage stage = (Stage) ((Node)nextimg).getScene().getWindow();
-            Parent root = null;
-            try {
-                root = FXMLLoader.load(getClass().getResource("/Main/Resources/fxml/"+fxmlnext+".fxml"));
-            } catch (IOException ioException) {
-                ioException.printStackTrace();
-            }
-            Scene scene = new Scene(root, Values.AppWidht(), Values.AppHeight());
-            stage.setScene(scene);
-        });
-        previmg.setOnMouseClicked((MouseEvent e) ->{
-            Stage stage = (Stage) ((Node)previmg).getScene().getWindow();
-            Parent root = null;
-            try {
-                root = FXMLLoader.load(getClass().getResource("/Main/Resources/fxml/"+fxmlprev+".fxml"));
-            } catch (IOException ioException) {
-                ioException.printStackTrace();
-            }
-            Scene scene = new Scene(root, Values.AppWidht(), Values.AppHeight());
-            stage.setScene(scene);
-        });
-        closeimg.setOnMouseClicked((MouseEvent e) ->{
-            Stage stage = (Stage) closeimg.getScene().getWindow();
-            stage.close();
-        });
+        retweet.dondeestacr7(fxmlprev,fxmlthis,fxmlnext);
+        retweet.cambiarPantalla(nextimg,fxmlnext,getClass());
+        retweet.cambiarPantalla(previmg,fxmlprev,getClass());
+        retweet.cerrarApp(closeimg);
+
     }
 }
