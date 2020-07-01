@@ -79,63 +79,108 @@ public class _5_MallaController implements Initializable {
     public AnchorPane panelmenubar;
     @FXML
     public AnchorPane panelvista;
-    Button LastButton = primero;
+    public Integer LastButton = 1;
 
     @FXML
     private void primerAct(ActionEvent event) throws Exception{
         cambiar(d_5_1,getClass(),panelborder);
-        estilo(primero);
+        estilo(primero,LastButton);
+        LastButton=1;
     }
     @FXML
     private void segundaAct(ActionEvent event) throws Exception{
         cambiar(d_5_2,getClass(),panelborder);
-        estilo(segundo);
+        estilo(segundo,LastButton);
+        LastButton=2;
     }
     @FXML
     private void tercerAct(ActionEvent event) throws Exception{
         cambiar(d_5_3,getClass(),panelborder);
-        estilo(tercero);
+        estilo(tercero,LastButton);
+        LastButton=3;
     }
     @FXML
     private void cuartoAct(ActionEvent event) throws Exception{
         cambiar(d_5_4,getClass(),panelborder);
-        estilo(cuarto);
+        estilo(cuarto,LastButton);
+        LastButton=4;
     }
     @FXML
     private void quintoAct(ActionEvent event) throws Exception{
         cambiar(d_5_5,getClass(),panelborder);
-        estilo(quinto);
+        estilo(quinto,LastButton);
+        LastButton=5;
     }
     @FXML
     private void sextoAct(ActionEvent event) throws Exception{
         cambiar(d_5_6,getClass(),panelborder);
-        estilo(sexto);
+        estilo(sexto,LastButton);
+        LastButton=6;
     }
 
     @FXML
     private void septimoAct(ActionEvent event) throws Exception{
         cambiar(d_5_7,getClass(),panelborder);
-        estilo(septimo);
+        estilo(septimo,LastButton);
+        LastButton=7;
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        primer();
+        // Mostramos donde estamos
         dondeestacr7(fxmlprev,fxmlthis,fxmlnext);
+        //damos tamanios
         tamanios();
+        iniciartodo();
+        //mostramos la primera pantalla del menu
+        primer();
+        //Cambios de pantalla
         cambiarPantalla(nextimg,fxmlnext,getClass());
         cambiarPantalla(previmg,fxmlprev,getClass());
+        //Cerrar
         cerrarApp(closeimg);
     }
 
     public void primer(){
         cambiar(d_5_1,getClass(),panelborder);
-        estilo(primero);
+        estiloInicial(primero);
     }
-    public void estilo(Button thisbutton){
-        reiniciarestilo(LastButton);
-        darestilo(thisbutton,LastButton);
-        LastButton=thisbutton;
+    public void estilo(Button thisbutton,Integer last){
+        switch(last) {
+            case 1:
+                reiniciarestilo(primero,primero.getText().length());
+                darestilo(thisbutton,primero,thisbutton.getText().length(),primero.getText().length());
+            case 2:
+                reiniciarestilo(segundo,segundo.getText().length());
+                darestilo(thisbutton,segundo,thisbutton.getText().length(),segundo.getText().length());
+            case 3:
+                reiniciarestilo(tercero,tercero.getText().length());
+                darestilo(thisbutton,tercero,thisbutton.getText().length(),tercero.getText().length());
+            case 4:
+                reiniciarestilo(cuarto,cuarto.getText().length());
+                darestilo(thisbutton,cuarto,thisbutton.getText().length(),cuarto.getText().length());
+            case 5:
+                reiniciarestilo(quinto,quinto.getText().length());
+                darestilo(thisbutton,quinto,thisbutton.getText().length(),quinto.getText().length());
+            case 6:
+                reiniciarestilo(sexto,sexto.getText().length());
+                darestilo(thisbutton,sexto,thisbutton.getText().length(),sexto.getText().length());
+            case 7:
+                reiniciarestilo(septimo,septimo.getText().length());
+                darestilo(thisbutton,septimo,thisbutton.getText().length(),septimo.getText().length());
+            default:
+                reiniciarestilo(primero,primero.getText().length());
+                darestilo(thisbutton,primero,thisbutton.getText().length(),primero.getText().length());
+        }
+    }
+    public void estiloInicial(Button thisbutton){
+        reiniciarestilo(primero,primero.getText().length());
+        defaultestilofocus(primero,primero.getText().length());
+    }
+    public void iniciartodo(){
+        estilo(primero,LastButton);
+        defaultestilo(segundo,segundo.getText().length());
+        defaultestilo(tercero,tercero.getText().length());
     }
     public void tamanios(){
         //Dando tamanios a las cosas segun la pantalla

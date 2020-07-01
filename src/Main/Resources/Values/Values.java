@@ -4,6 +4,7 @@ import javafx.geometry.Rectangle2D;
 import javafx.stage.Screen;
 
 public class Values {
+    //Tamanios
     public static Rectangle2D r = Screen.getPrimary().getBounds();
     public static double AppWidht()
     {
@@ -13,6 +14,10 @@ public class Values {
     {
         return r.getHeight();
     }
+    public static double Imagen0_5X(){return r.getWidth()/1.5;}
+    public static double Imagen0_5Y(){return r.getHeight()/1.5;}
+    public static double Imagen0_8X(){return r.getWidth()/1.8;}
+    public static double Imagen0_8Y(){return r.getHeight()/1.8;}
     public static double Imagen1X(){return r.getWidth()/2;}
     public static double Imagen1Y(){return r.getHeight()/2;}
     public static double Imagen1_3X(){return r.getWidth()/2.3;}

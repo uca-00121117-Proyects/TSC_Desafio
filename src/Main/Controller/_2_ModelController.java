@@ -30,7 +30,8 @@ public class _2_ModelController implements Initializable {
     public ImageView closeimg;
     @FXML
     public ImageView nextimg;
-
+    @FXML
+    public ImageView imagen1;
     @FXML
     public ImageView previmg;
     @FXML
@@ -44,12 +45,16 @@ public class _2_ModelController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        //cambiamos tamanios
         tamanios();
-       dondeestacr7(fxmlprev,fxmlthis,fxmlnext);
+        //mostramos donde estamos
+        dondeestacr7(fxmlprev,fxmlthis,fxmlnext);
+        //siguiente pantalla
         cambiarPantalla(nextimg,fxmlnext,getClass());
+        //pantalla anterior
         cambiarPantalla(previmg,fxmlprev,getClass());
+        //cerrar app
         cerrarApp(closeimg);
-
     }
     public void tamanios(){
         superior.setPrefHeight(Values.BarraY());
@@ -58,7 +63,8 @@ public class _2_ModelController implements Initializable {
         inferior.setPrefWidth(Values.AppHeight());
         panel.setTopAnchor(panelvista,Values.BarraY());
         panel.setBottomAnchor(panelvista,Values.BarraY());
-        
+        imagen1.setFitHeight(Values.Imagen1Y());
+        imagen1.setFitWidth(Values.Imagen1X());
     }
 
 }

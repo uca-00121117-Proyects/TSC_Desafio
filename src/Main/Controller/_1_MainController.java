@@ -18,10 +18,15 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import static Main.Resources.Values.retweet.cerrarApp;
+import static Main.Resources.Values.retweet.dondeestacr7;
 
 public class _1_MainController implements Initializable {
+
+    String fxmlprev = "0";
+    fxmlvalues fxmlt = fxmlvalues._1;
+    String fxmlthis = fxmlt.getdatos();
     fxmlvalues fxml = fxmlvalues._2;
-    String fxmlthis = fxml.getdatos();
+    String fxmlnext = fxml.getdatos();
     @FXML
     public Button next;
     @FXML
@@ -30,9 +35,8 @@ public class _1_MainController implements Initializable {
     public ImageView imagen1;
     @FXML
     private void nextScene(ActionEvent event) throws Exception{
-        System.out.println(fxmlthis);
         Stage stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("/Main/Resources/fxml/"+fxmlthis+".fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/Main/Resources/fxml/"+fxmlnext+".fxml"));
         Scene scene = new Scene(root, Values.AppWidht(), Values.AppHeight());
         scene.getStylesheets().add("/Main/Resources/css/style.css");
         stage.setScene(scene);
@@ -42,6 +46,7 @@ public class _1_MainController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         cerrarApp(close);
+        dondeestacr7(fxmlprev,fxmlthis,fxmlnext);
         imagen1.setFitHeight(Values.Imagen1Y());
         imagen1.setFitWidth(Values.Imagen1X());
     }

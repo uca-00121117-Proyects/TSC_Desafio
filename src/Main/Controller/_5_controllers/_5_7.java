@@ -10,16 +10,11 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class _5_7 implements Initializable {
-    private Stage mStage;
 
     @FXML
     public ImageView imagen1;
     @FXML
     public ImageView imagen2;
-
-    public void setStage(Stage mStage) {
-        this.mStage = mStage;
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

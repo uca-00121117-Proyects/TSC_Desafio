@@ -1,51 +1,53 @@
-
-
-.button:focused {
-             -fx-background-color: #4a148c;
-                  -fx-shadow-highlight-color:#4a148c;
-                   -fx-outer-border:#4a148c;
-                    -fx-inner-border:#4a148c ;
-                    -fx-body-color:#4a148c;
-             -fx-text-fill: white;
-             -fx-focus-color: white;
-             opacity: 0.6;
+.button
+{
+    transition-duration: 0.4s;
+    -fx-background-color: transparent;
+}
+.button:focused
+{
+    -fx-background-color: #4a148c;
+    -fx-shadow-highlight-color:#4a148c;
+    -fx-outer-border:#4a148c;
+    -fx-inner-border:#4a148c ;
+    -fx-body-color:#4a148c;
+    -fx-text-fill: white;
+    -fx-focus-color: white;
+    opacity: 0.6;
  }
- .button {
-   transition-duration: 0.4s;
-    -fx-background-color: #transparent;
 
- }
- .button:hover {
-     -fx-background-color:#7c43bd;
-      -fx-shadow-highlight-color:#7c43bd;
-       -fx-outer-border:#7c43bd;
-        -fx-inner-border:#7c43bd ;
-        -fx-body-color:#7c43bd;
+ .button:hover
+ {
+    -fx-background-color:#7c43bd;
+    -fx-shadow-highlight-color:#7c43bd;
+    -fx-outer-border:#7c43bd;
+    -fx-inner-border:#7c43bd ;
+    -fx-body-color:#7c43bd;
     -fx-text-fill: white;
     -fx-focus-color: white;
   }
-#botonmenu {
+#botonmenu{
     transition-duration: 0.4s;
     -fx-background-color: #484848;
 
 }
-
-.menu-item .label {
+#botonmenu:focused{
+    -fx-background-color: #4a148c;
+    -fx-shadow-highlight-color:#4a148c;
+    -fx-outer-border:#4a148c;
+    -fx-inner-border:#4a148c ;
+    -fx-body-color:#4a148c;
     -fx-text-fill: white;
-}
+    -fx-focus-color: white;
+    opacity: 0.6;
+ }
 
-.menu-item:focused {
-     -fx-background-color: darkgray;
-}
+ #botonmenu:hover{
+    -fx-background-color:#7c43bd;
+    -fx-shadow-highlight-color:#7c43bd;
+    -fx-outer-border:#7c43bd;
+    -fx-inner-border:#7c43bd ;
+    -fx-body-color:#7c43bd;
+    -fx-text-fill: white;
+    -fx-focus-color: white;
+  }
 
-.menu-item:focused .label {
-    -fx-text-fill: blue;
-}
-
-.context-menu {
-    -fx-background-color: black;
-    -fx-background-insets: 0, 1, 2;
-    -fx-background-radius: 0 6 6 6, 0 5 5 5, 0 4 4 4;
-/*    -fx-padding: 0.666667em 0.083333em 0.666667em 0.083333em;  8 1 8 1 */
-    -fx-padding: 0.333333em 0.083333em 0.666667em 0.083333em; /* 4 1 8 1 */
-}

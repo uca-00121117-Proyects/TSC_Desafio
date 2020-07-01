@@ -11,6 +11,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -46,8 +47,7 @@ public class _4_CondicionesController implements Initializable {
     private Button segundo;
     @FXML
     private Button tercero;
-    @FXML
-    private Button cuarto;
+
     @FXML
     public BorderPane panelborder;
     @FXML
@@ -62,44 +62,75 @@ public class _4_CondicionesController implements Initializable {
     public AnchorPane panelmenubar;
     @FXML
     public AnchorPane panelvista;
-    Button LastButton = primero;
+    public Integer LastButton = 1;
 
     @FXML
     private void primerAct(ActionEvent event) throws Exception{
       cambiar(d_4_1,getClass(),panelborder);
-       estilo(primero);
+       estilo(primero,LastButton);
+        LastButton=1;
     }
     @FXML
     private void segundaAct(ActionEvent event) throws Exception{
         cambiar(d_4_2,getClass(),panelborder);
-        estilo(segundo);
+        estilo(segundo,LastButton);
+        System.out.println(segundo.getStyle());
+        LastButton=2;
     }
     @FXML
     private void tercerAct(ActionEvent event) throws Exception{
         cambiar(d_4_3,getClass(),panelborder);
-        estilo(tercero);
+        estilo(tercero,LastButton);
+        System.out.println(tercero.getStyle());
+        LastButton=3;
     }
 
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        primer();
+        // Mostramos donde estamos
         dondeestacr7(fxmlprev,fxmlthis,fxmlnext);
+        //damos tamanios
         tamanios();
+        iniciartodo();
+        //mostramos la primera pantalla del menu
+        primer();
+        //Cambios de pantalla
         cambiarPantalla(nextimg,fxmlnext,getClass());
         cambiarPantalla(previmg,fxmlprev,getClass());
+        //Cerrar
         cerrarApp(closeimg);
     }
 
     public void primer(){
         cambiar(d_4_1,getClass(),panelborder);
-       estilo(primero);
+        estiloInicial(primero);
     }
-    public void estilo(Button thisbutton){
-        reiniciarestilo(LastButton);
-        darestilo(thisbutton,LastButton);
-        LastButton=thisbutton;
+    public void estilo(Button thisbutton,Integer last){
+        switch(last) {
+            case 1:
+                reiniciarestilo(primero,primero.getText().length());
+                darestilo(thisbutton,primero,thisbutton.getText().length(),primero.getText().length());
+            case 2:
+                reiniciarestilo(segundo,segundo.getText().length());
+                darestilo(thisbutton,segundo,thisbutton.getText().length(),segundo.getText().length());
+            case 3:
+                reiniciarestilo(tercero,tercero.getText().length());
+                darestilo(thisbutton,tercero,thisbutton.getText().length(),tercero.getText().length());
+            default:
+                reiniciarestilo(primero,primero.getText().length());
+                darestilo(thisbutton,primero,thisbutton.getText().length(),primero.getText().length());
+        }
+    }
+    public void estiloInicial(Button thisbutton){
+        reiniciarestilo(primero,primero.getText().length());
+        defaultestilofocus(primero,primero.getText().length());
+    }
+    public void iniciartodo(){
+        estilo(primero,LastButton);
+        defaultestilo(segundo,segundo.getText().length());
+        defaultestilo(tercero,tercero.getText().length());
     }
     public void tamanios(){
         //Dando tamanios a las cosas segun la pantalla

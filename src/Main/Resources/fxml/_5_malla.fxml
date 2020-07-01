@@ -14,7 +14,7 @@
     <children>
       <AnchorPane id="dominio" fx:id="panelmenubar" prefHeight="200.0" prefWidth="412.0" style="-fx-background-color: #212121;" AnchorPane.leftAnchor="0.0">
          <children>
-            <ScrollPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #212121;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <content>
                   <VBox prefHeight="200.0">
                      <children>
@@ -23,32 +23,32 @@
                               <Font size="42.0" />
                            </font>
                         </Button>
-                        <Button id="botonmenu" fx:id="segundo" mnemonicParsing="false" onAction="#segundaAct" text="Elemento1" textFill="WHITE">
+                        <Button id="botonmenu" fx:id="segundo" mnemonicParsing="false" onAction="#segundaAct" text="Elemento 1" textFill="WHITE">
                            <font>
                               <Font size="42.0" />
                            </font>
                         </Button>
-                        <Button id="botonmenu" fx:id="tercero" mnemonicParsing="false" onAction="#tercerAct" text="Elemento2" textFill="WHITE">
+                        <Button id="botonmenu" fx:id="tercero" mnemonicParsing="false" onAction="#tercerAct" text="Elemento 2" textFill="WHITE">
                            <font>
                               <Font size="42.0" />
                            </font>
                         </Button>
-                        <Button id="botonmenu" fx:id="cuarto" mnemonicParsing="false" onAction="#cuartoAct" text="Elemento3" textFill="WHITE">
+                        <Button id="botonmenu" fx:id="cuarto" mnemonicParsing="false" onAction="#cuartoAct" text="Elemento 3" textFill="WHITE">
                            <font>
                               <Font size="42.0" />
                            </font>
                         </Button>
-                        <Button id="botonmenu" fx:id="quinto" mnemonicParsing="false" onAction="#quintoAct" text="Elemento4" textFill="WHITE">
+                        <Button id="botonmenu" fx:id="quinto" mnemonicParsing="false" onAction="#quintoAct" text="Elemento 4" textFill="WHITE">
                            <font>
                               <Font size="42.0" />
                            </font>
                         </Button>
-                        <Button id="botonmenu" fx:id="sexto" mnemonicParsing="false" onAction="#sextoAct" text="Elemento5" textFill="WHITE">
+                        <Button id="botonmenu" fx:id="sexto" mnemonicParsing="false" onAction="#sextoAct" text="Elemento 5" textFill="WHITE">
                            <font>
                               <Font size="42.0" />
                            </font>
                         </Button>
-                        <Button id="botonmenu" fx:id="septimo" mnemonicParsing="false" onAction="#septimoAct" text="Elemento6" textFill="WHITE">
+                        <Button id="botonmenu" fx:id="septimo" mnemonicParsing="false" onAction="#septimoAct" text="Elemento 6" textFill="WHITE">
                            <font>
                               <Font size="42.0" />
                            </font>

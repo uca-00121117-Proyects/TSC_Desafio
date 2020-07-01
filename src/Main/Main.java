@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 
@@ -15,15 +16,14 @@ import javax.sound.midi.Soundbank;
 import java.sql.SQLOutput;
 
 public class Main extends Application {
-
     fxmlvalues fxml = fxmlvalues._1;
     String fxmlthis = fxml.getdatos();
-
     @Override
     public void start(Stage index) throws Exception{
-        System.out.println(fxmlthis);
+        System.out.println( "********\t\t\tIniciando la app\t\t\t********");
         Parent root = FXMLLoader.load(getClass().getResource("Resources/fxml/"+ fxmlthis+".fxml"));
         index.initStyle(StageStyle.UNDECORATED);
+        index.getIcons().add(new Image("/Main/Resources/images/icons/icon.png"));
         Scene scene =new Scene(root, Values.AppWidht(), Values.AppHeight());
         scene.getStylesheets().add("/Main/Resources/css/style.css");
         index.setScene(scene);
@@ -48,6 +48,14 @@ public class Main extends Application {
 //https://www.google.com/search?q=off+icon&client=firefox-b-d&sxsrf=ALeKk02GIDFEWMrfvEB02L2Gs3ahmRW5XQ:1593416027278&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj33qOiwabqAhVlUt8KHSa9D3AQ_AUoAXoECBYQAw&biw=1366&bih=622#imgrc=w_lpsjK2ICa52M
 //https://stackoverflow.com/questions/30680570/javafx-button-border-and-hover
 //https://stackoverflow.com/questions/36936125/javafx-css-id-selector-with-class-selector-not-working
+//https://stackoverflow.com/questions/30680570/javafx-button-border-and-hover
+//https://stackoverflow.com/questions/27668201/how-to-set-default-css-for-all-buttons-in-javafx
+
+
+
+
+
+
 
 
 

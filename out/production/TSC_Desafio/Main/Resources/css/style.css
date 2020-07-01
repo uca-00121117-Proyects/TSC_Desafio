@@ -1,36 +1,10 @@
-.root{
-
+.button
+{
+    transition-duration: 0.4s;
+    -fx-background-color: transparent;
 }
-.button {
-   -fx-background-color: transparent;
- }
- .button:focused {
-     -fx-background-color: #4a148c;
-     -fx-shadow-highlight-color:#4a148c;
-     -fx-outer-border:#4a148c;
-     -fx-inner-border:#4a148c ;
-     -fx-body-color:#4a148c;
-     -fx-text-fill: white;
-     -fx-focus-color: white;
-     opacity: 0.6;
-  }
-
-  .button :hover {
-      -fx-background-color:#7c43bd;
-       -fx-shadow-highlight-color:#7c43bd;
-        -fx-outer-border:#7c43bd;
-         -fx-inner-border:#7c43bd ;
-         -fx-body-color:#7c43bd;
-     -fx-text-fill: white;
-     -fx-focus-color: white;
-   }
- #botonmenu {
-     transition-duration: 0.4s;
-     -fx-background-color: #484848;
-
- }
-
-#botonmenu:focused {
+.button:focused
+{
     -fx-background-color: #4a148c;
     -fx-shadow-highlight-color:#4a148c;
     -fx-outer-border:#4a148c;
@@ -41,14 +15,39 @@
     opacity: 0.6;
  }
 
- #botonmenu:hover {
-     -fx-background-color:#7c43bd;
-      -fx-shadow-highlight-color:#7c43bd;
-       -fx-outer-border:#7c43bd;
-        -fx-inner-border:#7c43bd ;
-        -fx-body-color:#7c43bd;
+ .button:hover
+ {
+    -fx-background-color:#7c43bd;
+    -fx-shadow-highlight-color:#7c43bd;
+    -fx-outer-border:#7c43bd;
+    -fx-inner-border:#7c43bd ;
+    -fx-body-color:#7c43bd;
     -fx-text-fill: white;
     -fx-focus-color: white;
   }
+#botonmenu{
+    transition-duration: 0.4s;
+    -fx-background-color: #484848;
 
+}
+#botonmenu:focused{
+    -fx-background-color: #4a148c;
+    -fx-shadow-highlight-color:#4a148c;
+    -fx-outer-border:#4a148c;
+    -fx-inner-border:#4a148c ;
+    -fx-body-color:#4a148c;
+    -fx-text-fill: white;
+    -fx-focus-color: white;
+    opacity: 0.6;
+ }
+
+ #botonmenu:hover{
+    -fx-background-color:#7c43bd;
+    -fx-shadow-highlight-color:#7c43bd;
+    -fx-outer-border:#7c43bd;
+    -fx-inner-border:#7c43bd ;
+    -fx-body-color:#7c43bd;
+    -fx-text-fill: white;
+    -fx-focus-color: white;
+  }
 

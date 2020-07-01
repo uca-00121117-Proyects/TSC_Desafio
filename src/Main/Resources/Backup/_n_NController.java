@@ -11,6 +11,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -91,7 +92,7 @@ public class _n_NController implements Initializable {
         tamanios();
         cambiarPantalla(nextimg,fxmlnext,getClass());
         cambiarPantalla(previmg,fxmlprev,getClass());
-        cerrarApp(closeimg);
+
     }
 
     public void primer(){
@@ -99,9 +100,10 @@ public class _n_NController implements Initializable {
        estilo(primero);
     }
     public void estilo(Button thisbutton){
-        reiniciarestilo(LastButton);
-        darestilo(thisbutton,LastButton);
-        LastButton=thisbutton;
+        if(LastButton!=null){
+            reiniciarestilo(LastButton,LastButton.getText().length());
+            darestilo(thisbutton,LastButton,thisbutton.getText().length(),LastButton.getText().length());
+            LastButton=thisbutton;}
     }
     public void tamanios(){
         //Dando tamanios a las cosas segun la pantalla
