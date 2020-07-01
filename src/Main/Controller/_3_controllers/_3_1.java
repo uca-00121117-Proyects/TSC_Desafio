@@ -28,55 +28,12 @@ public class _3_1 implements Initializable {
     public void setStage(Stage mStage) {
         this.mStage = mStage;
     }
-    fxmlvalues fxmlp = fxmlvalues._2;
-    String fxmlprev = fxmlp.getdatos();
-    fxmlvalues fxmlt = fxmlvalues._3;
-    String fxmlthis = fxmlt.getdatos();
-    fxmlvalues fxml = fxmlvalues._4;
-    String fxmlnext = fxml.getdatos();
     @FXML
-    public ImageView closeimg;
-    @FXML
-    public ImageView nextimg;
-
-    @FXML
-    public ImageView previmg;
-
-    @FXML
-    private Button primero;
-    @FXML
-    private Button segundo;
-    @FXML
-    private Button tercero;
-    @FXML
-    private Button cuarto;
-    @FXML
-    public BorderPane panelborder;
-
-    @FXML
-    private void primerAct(ActionEvent event) throws Exception{
-        cambiar("_3_1",event);
-    }
-    @FXML
-    private void segundaAct(ActionEvent event) throws Exception{
-        cambiar("_3_2",event);
-    }
-    @FXML
-    private void tercerAct(ActionEvent event) throws Exception{
-        cambiar("_3_3",event);
-    }
-    @FXML
-    private void cuartaAct(ActionEvent event) throws Exception{
-        cambiar("_3_4",event);
-    }
-
-
+    public ImageView imagen1;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
-    public void cambiar(String ui,ActionEvent event) throws Exception {
-
+        imagen1.setFitHeight(Values.Imagen2X());
+        imagen1.setFitWidth(Values.Imagen2X());
     }
 }
 //    Parent blah = FXMLLoader.load(getClass().getResource("/Main/Resources/fxml/"+ui+".fxml"));

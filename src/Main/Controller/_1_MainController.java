@@ -17,6 +17,8 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import static Main.Resources.Values.retweet.cerrarApp;
+
 public class _1_MainController implements Initializable {
     fxmlvalues fxml = fxmlvalues._2;
     String fxmlthis = fxml.getdatos();
@@ -24,7 +26,8 @@ public class _1_MainController implements Initializable {
     public Button next;
     @FXML
     public ImageView close;
-
+    @FXML
+    public ImageView imagen1;
     @FXML
     private void nextScene(ActionEvent event) throws Exception{
         System.out.println(fxmlthis);
@@ -38,10 +41,8 @@ public class _1_MainController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        close.setOnMouseClicked((MouseEvent e) ->{
-            Stage stage = (Stage) close.getScene().getWindow();
-            stage.close();
-        });
-
+        cerrarApp(close);
+        imagen1.setFitHeight(Values.Imagen1Y());
+        imagen1.setFitWidth(Values.Imagen1X());
     }
 }

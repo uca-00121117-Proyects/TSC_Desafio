@@ -2,7 +2,7 @@ package Main.Controller;
 
 import Main.Resources.Values.Values;
 import Main.Resources.Values.fxmlvalues;
-import Main.Resources.Values.retweet;
+import Main.Resources.Values.retweet.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -11,11 +11,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static Main.Resources.Values.retweet.*;
 
 public class _2_ModelController implements Initializable {
     fxmlvalues fxmlp = fxmlvalues._1;
@@ -31,13 +33,32 @@ public class _2_ModelController implements Initializable {
 
     @FXML
     public ImageView previmg;
+    @FXML
+    public AnchorPane superior;
+    @FXML
+    public AnchorPane inferior;
+    @FXML
+    public AnchorPane panelvista;
+    @FXML
+    public AnchorPane panel;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        retweet.dondeestacr7(fxmlprev,fxmlthis,fxmlnext);
-        retweet.cambiarPantalla(nextimg,fxmlnext,getClass());
-        retweet.cambiarPantalla(previmg,fxmlprev,getClass());
-        retweet.cerrarApp(closeimg);
+        tamanios();
+       dondeestacr7(fxmlprev,fxmlthis,fxmlnext);
+        cambiarPantalla(nextimg,fxmlnext,getClass());
+        cambiarPantalla(previmg,fxmlprev,getClass());
+        cerrarApp(closeimg);
 
     }
+    public void tamanios(){
+        superior.setPrefHeight(Values.BarraY());
+        inferior.setPrefHeight(Values.BarraY());
+        superior.setPrefWidth(Values.AppHeight());
+        inferior.setPrefWidth(Values.AppHeight());
+        panel.setTopAnchor(panelvista,Values.BarraY());
+        panel.setBottomAnchor(panelvista,Values.BarraY());
+        
+    }
+
 }

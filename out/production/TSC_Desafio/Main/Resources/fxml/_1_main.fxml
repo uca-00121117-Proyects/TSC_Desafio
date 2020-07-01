@@ -19,7 +19,7 @@
                      <Insets bottom="20.0" />
                   </padding>
                </Label>
-               <ImageView fitHeight="309.0" fitWidth="446.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fx:id="imagen1" fitHeight="309.0" fitWidth="446.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/main.gif" />
                </image>
