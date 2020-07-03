@@ -1,5 +1,6 @@
 package Main.Controller;
 
+import Main.Resources.Values.TamaniosValues;
 import Main.Resources.Values.Values;
 import Main.Resources.Values.fxmlvalues;
 import Main.Resources.Values.retweet.*;
@@ -57,14 +58,9 @@ public class _2_ModelController implements Initializable {
         cerrarApp(closeimg);
     }
     public void tamanios(){
-        superior.setPrefHeight(Values.BarraY());
-        inferior.setPrefHeight(Values.BarraY());
-        superior.setPrefWidth(Values.AppHeight());
-        inferior.setPrefWidth(Values.AppHeight());
-        panel.setTopAnchor(panelvista,Values.BarraY());
-        panel.setBottomAnchor(panelvista,Values.BarraY());
-        imagen1.setFitHeight(Values.Imagen1Y());
-        imagen1.setFitWidth(Values.Imagen1X());
+        TamaniosValues.tamaniosbarras(superior,inferior);
+        TamaniosValues.posicionpanelgrande(panel,panelvista);
+        TamaniosValues.tamanioimagen01(imagen1);
     }
 
 }

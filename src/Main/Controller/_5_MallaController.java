@@ -1,8 +1,6 @@
 package Main.Controller;
 
-import Main.Resources.Values.Values;
-import Main.Resources.Values.fxmlvalues;
-import Main.Resources.Values.routes;
+import Main.Resources.Values.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -146,32 +144,7 @@ public class _5_MallaController implements Initializable {
         estiloInicial(primero);
     }
     public void estilo(Button thisbutton,Integer last){
-        switch(last) {
-            case 1:
-                reiniciarestilo(primero,primero.getText().length());
-                darestilo(thisbutton,primero,thisbutton.getText().length(),primero.getText().length());
-            case 2:
-                reiniciarestilo(segundo,segundo.getText().length());
-                darestilo(thisbutton,segundo,thisbutton.getText().length(),segundo.getText().length());
-            case 3:
-                reiniciarestilo(tercero,tercero.getText().length());
-                darestilo(thisbutton,tercero,thisbutton.getText().length(),tercero.getText().length());
-            case 4:
-                reiniciarestilo(cuarto,cuarto.getText().length());
-                darestilo(thisbutton,cuarto,thisbutton.getText().length(),cuarto.getText().length());
-            case 5:
-                reiniciarestilo(quinto,quinto.getText().length());
-                darestilo(thisbutton,quinto,thisbutton.getText().length(),quinto.getText().length());
-            case 6:
-                reiniciarestilo(sexto,sexto.getText().length());
-                darestilo(thisbutton,sexto,thisbutton.getText().length(),sexto.getText().length());
-            case 7:
-                reiniciarestilo(septimo,septimo.getText().length());
-                darestilo(thisbutton,septimo,thisbutton.getText().length(),septimo.getText().length());
-            default:
-                reiniciarestilo(primero,primero.getText().length());
-                darestilo(thisbutton,primero,thisbutton.getText().length(),primero.getText().length());
-        }
+        StyleValues.stylebuttoncontroller(last,thisbutton,primero,segundo,tercero,cuarto,quinto,sexto,septimo,null,null,null);
     }
     public void estiloInicial(Button thisbutton){
         reiniciarestilo(primero,primero.getText().length());
@@ -184,25 +157,10 @@ public class _5_MallaController implements Initializable {
     }
     public void tamanios(){
         //Dando tamanios a las cosas segun la pantalla
-        superior.setPrefHeight(Values.BarraY());
-        inferior.setPrefHeight(Values.BarraY());
+        TamaniosValues.tamaniosbarras(superior,inferior);
         //Le sumo 20 por la barra scroll
-        panelmenubar.setPrefWidth(Values.PanelAncho()+20);
-        primero.setPrefWidth(Values.PanelAncho());
-        segundo.setPrefWidth(Values.PanelAncho());
-        tercero.setPrefWidth(Values.PanelAncho());
-        cuarto.setPrefWidth(Values.PanelAncho());
-        quinto.setPrefWidth(Values.PanelAncho());
-        sexto.setPrefWidth(Values.PanelAncho());
-        septimo.setPrefWidth(Values.PanelAncho());
-        superior.setPrefWidth(Values.AppWidht());
-        inferior.setPrefWidth(Values.AppWidht());
-        panel.setTopAnchor(panelmenubar,Values.PanelYInicio());
-        panel.setBottomAnchor(panelmenubar,Values.PanelYInicio());
-        panel.setTopAnchor(panelvista,Values.PanelYInicio());
-        //Lo mismo le sumo 20 por el scroll
-        panel.setLeftAnchor(panelvista, Values.PanelAncho()+20);
-        panel.setBottomAnchor(panelvista, Values.BarraY());
-
+        TamaniosValues.tamaniobotones(primero,segundo,tercero,cuarto,quinto,sexto,septimo,null,null,null);
+        TamaniosValues.tamaniopanelmenu(panel,panelmenubar);
+        TamaniosValues.posicionpanelfragmento(panel,panelvista);
     }
 }

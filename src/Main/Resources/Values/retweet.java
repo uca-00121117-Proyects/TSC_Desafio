@@ -38,12 +38,18 @@ public class retweet {
     //Cambiamos de pantalla con una imagen
     public static void cambiarPantalla(ImageView imagen, String fxml,Class thisclass){
         imagen.setOnMouseClicked((MouseEvent e) ->{
-
+            System.out.println("\n\t\t\t ESTAS EN PAGINA: "+fxml+"\t\t\t\n");
             Parent root = null;
             try {
                 //Donde esta nuestro nuevo layout
                 root = FXMLLoader.load(thisclass.getResource("/Main/Resources/fxml/"+fxml+".fxml"));
             } catch (IOException ioException) {
+                try {
+                    root = FXMLLoader.load(thisclass.getResource("/Main/Resources/fxml/error_404.fxml"));
+                    retweet.nuevaScena(root,imagen);
+                } catch (IOException exception) {
+                    exception.printStackTrace();
+                }
                 ioException.printStackTrace();
             }
             //una vez tenemos el layout mandamos el layout y la imagen que en este caso sirve de boton
@@ -65,6 +71,7 @@ public class retweet {
     }
     //Cambiamos el layout de un bordepane que sirve como una "Minipantalla"
     public static void cambiar(String fxml, Class thisclass, BorderPane panel){
+        System.out.println("\t\t\t ESTAS EN EL FRAGMENTO: "+fxml+"\t\t\t");
         Parent root = null;
         try {
             root = FXMLLoader.load(thisclass.getResource("/Main/Resources/fxml/"+fxml+".fxml"));

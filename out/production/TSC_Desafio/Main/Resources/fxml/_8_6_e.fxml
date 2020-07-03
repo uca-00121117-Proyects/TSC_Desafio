@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="panel" prefHeight="720.0" prefWidth="1198.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.Controller._8_6_e">
+    <children>
+        <AnchorPane id="dominio" fx:id="panelmenubar" prefHeight="200.0" prefWidth="412.0" style="-fx-background-color: #212121;" AnchorPane.leftAnchor="0.0">
+            <children>
+                <VBox prefHeight="200.0">
+                    <children>
+                        <Button id="botonmenu" fx:id="primero" mnemonicParsing="false" onAction="#primerAct" text="Integral de e" textFill="WHITE">
+                            <font>
+                                <Font size="42.0" />
+                            </font>
+                        </Button>
+                        <Button id="botonmenu" fx:id="segundo" mnemonicParsing="false" onAction="#segundaAct" text="Recordamos" textFill="WHITE">
+                            <font>
+                                <Font size="42.0" />
+                            </font>
+                        </Button>
+                        <Button id="botonmenu" fx:id="tercero" mnemonicParsing="false" onAction="#tercerAct" text="Resolvemos" textFill="WHITE">
+                            <font>
+                                <Font size="42.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="superior" layoutX="28.0" layoutY="10.0" prefWidth="1198.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="68.0" layoutY="15.0" prefHeight="98.0" prefWidth="1198.0" text="Componentes de f" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <font>
+                        <Font size="55.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <ImageView fx:id="closeimg" fitHeight="73.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+            <image>
+                <Image url="@../images/icons/exit.png" />
+            </image>
+        </ImageView>
+        <AnchorPane fx:id="inferior" layoutY="352.0" prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+
+                <ImageView fx:id="nextimg" fitHeight="100.0" fitWidth="80.0" layoutX="1070.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+                    <image>
+                        <Image url="@../images/icons/siguiente.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="previmg" fitHeight="100.0" fitWidth="80.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="8.0">
+                    <image>
+                        <Image url="@../images/icons/anterior.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="panelvista" prefHeight="200.0" prefWidth="576.0" style="-fx-background-color: black;" AnchorPane.rightAnchor="0.0">
+            <children>
+                <BorderPane fx:id="panelborder" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

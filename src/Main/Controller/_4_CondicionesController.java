@@ -1,8 +1,6 @@
 package Main.Controller;
 
-import Main.Resources.Values.Values;
-import Main.Resources.Values.fxmlvalues;
-import Main.Resources.Values.routes;
+import Main.Resources.Values.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -108,20 +106,7 @@ public class _4_CondicionesController implements Initializable {
         estiloInicial(primero);
     }
     public void estilo(Button thisbutton,Integer last){
-        switch(last) {
-            case 1:
-                reiniciarestilo(primero,primero.getText().length());
-                darestilo(thisbutton,primero,thisbutton.getText().length(),primero.getText().length());
-            case 2:
-                reiniciarestilo(segundo,segundo.getText().length());
-                darestilo(thisbutton,segundo,thisbutton.getText().length(),segundo.getText().length());
-            case 3:
-                reiniciarestilo(tercero,tercero.getText().length());
-                darestilo(thisbutton,tercero,thisbutton.getText().length(),tercero.getText().length());
-            default:
-                reiniciarestilo(primero,primero.getText().length());
-                darestilo(thisbutton,primero,thisbutton.getText().length(),primero.getText().length());
-        }
+        StyleValues.stylebuttoncontroller(last,thisbutton,primero,segundo,tercero,null,null,null,null,null,null,null);
     }
     public void estiloInicial(Button thisbutton){
         reiniciarestilo(primero,primero.getText().length());
@@ -134,16 +119,10 @@ public class _4_CondicionesController implements Initializable {
     }
     public void tamanios(){
         //Dando tamanios a las cosas segun la pantalla
-        superior.setPrefHeight(Values.BarraY());
-        inferior.setPrefHeight(Values.BarraY());
-        panelmenubar.setPrefWidth(Values.PanelAncho());
-        superior.setPrefWidth(Values.AppWidht());
-        inferior.setPrefWidth(Values.AppWidht());
-        panel.setTopAnchor(panelmenubar,Values.PanelYInicio());
-        panel.setBottomAnchor(panelmenubar,Values.PanelYInicio());
-        panel.setTopAnchor(panelvista,Values.PanelYInicio());
-        panel.setLeftAnchor(panelvista, Values.PanelAncho());
-        panel.setBottomAnchor(panelvista, Values.BarraY());
+        TamaniosValues.tamaniosbarras(superior,inferior);
+        TamaniosValues.tamaniopanelmenu(panel,panelmenubar);
+        TamaniosValues.posicionpanelfragmento(panel,panelvista);
+        TamaniosValues.tamaniobotones(primero,segundo,tercero,null,null,null,null,null,null,null);
 
     }
 

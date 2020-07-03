@@ -1,5 +1,6 @@
 package Main.Controller._3_controllers;
 
+import Main.Resources.Values.TamaniosValues;
 import Main.Resources.Values.Values;
 import Main.Resources.Values.fxmlvalues;
 import javafx.event.ActionEvent;
@@ -7,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -15,19 +17,25 @@ import java.util.ResourceBundle;
 
 public class _3_2 implements Initializable {
     private Stage mStage;
-
-
+    @FXML
+    public AnchorPane panel;
+    @FXML
+    public BorderPane vista;
 
     public void setStage(Stage mStage) {
         this.mStage = mStage;
     }
-
+    @FXML
+    public AnchorPane panelf;
+    @FXML
+    public BorderPane vistaf;
     @FXML
     public ImageView imagen1;
     @FXML
     public ImageView imagen2;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        TamaniosValues.bordefragmento(panelf,vistaf);
         imagen1.setFitHeight(Values.Imagen1_3Y());
         imagen1.setFitWidth(Values.Imagen1_3X());
         imagen2.setFitHeight(Values.Imagen1_3Y());

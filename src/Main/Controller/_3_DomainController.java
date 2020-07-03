@@ -54,10 +54,8 @@ public class _3_DomainController implements Initializable {
     private Button primero;
     @FXML
     private Button segundo;
-    @FXML
-    private Button tercero;
-    @FXML
-    private Button cuarto;
+
+
     @FXML
     public BorderPane panelborder;
     @FXML
@@ -86,14 +84,6 @@ public class _3_DomainController implements Initializable {
         estilo(segundo,LastButton);
         LastButton=2;
     }
-    @FXML
-    private void tercerAct(ActionEvent event) throws Exception{
-        cambiar(d_3_3,getClass(),panelborder);
-        estilo(tercero,LastButton);
-        LastButton=3;
-    }
-
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -116,20 +106,7 @@ public class _3_DomainController implements Initializable {
         estiloInicial(primero);
     }
     public void estilo(Button thisbutton,Integer last){
-        switch(last) {
-            case 1:
-                reiniciarestilo(primero,primero.getText().length());
-                darestilo(thisbutton,primero,thisbutton.getText().length(),primero.getText().length());
-            case 2:
-                reiniciarestilo(segundo,segundo.getText().length());
-                darestilo(thisbutton,segundo,thisbutton.getText().length(),segundo.getText().length());
-            case 3:
-                reiniciarestilo(tercero,tercero.getText().length());
-                darestilo(thisbutton,tercero,thisbutton.getText().length(),tercero.getText().length());
-            default:
-                reiniciarestilo(primero,primero.getText().length());
-                darestilo(thisbutton,primero,thisbutton.getText().length(),primero.getText().length());
-        }
+        StyleValues.stylebuttoncontroller(last,thisbutton,primero,segundo,null,null,null,null,null,null,null,null);
     }
     public void estiloInicial(Button thisbutton){
         reiniciarestilo(primero,primero.getText().length());
@@ -138,20 +115,13 @@ public class _3_DomainController implements Initializable {
     public void iniciartodo(){
         estilo(primero,LastButton);
         defaultestilo(segundo,segundo.getText().length());
-        defaultestilo(tercero,tercero.getText().length());
     }
     public void tamanios(){
         //Dando tamanios a las cosas segun la pantalla
-        superior.setPrefHeight(Values.BarraY());
-        inferior.setPrefHeight(Values.BarraY());
-        panelmenubar.setPrefWidth(Values.PanelAncho());
-        superior.setPrefWidth(Values.AppWidht());
-        inferior.setPrefWidth(Values.AppWidht());
-        panel.setTopAnchor(panelmenubar,Values.PanelYInicio());
-        panel.setBottomAnchor(panelmenubar,Values.PanelYInicio());
-        panel.setTopAnchor(panelvista,Values.PanelYInicio());
-        panel.setLeftAnchor(panelvista, Values.PanelAncho());
-        panel.setBottomAnchor(panelvista, Values.BarraY());
+        TamaniosValues.tamaniosbarras(superior,inferior);
+        TamaniosValues.tamaniopanelmenu(panel,panelmenubar);
+        TamaniosValues.posicionpanelfragmento(panel,panelvista);
+        TamaniosValues.tamaniobotones(primero,segundo,null,null,null,null,null,null,null,null);
 
     }
 
