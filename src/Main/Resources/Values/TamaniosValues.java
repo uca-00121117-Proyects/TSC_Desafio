@@ -70,7 +70,14 @@ public class TamaniosValues {
         imagen.setFitHeight(Values.Imagen1Y());
         imagen.setFitWidth(Values.Imagen1X());
     }
-
+    public static void tamanioimagen05(ImageView imagen){
+        imagen.setFitHeight(Values.Imagen0_5Y());
+        imagen.setFitWidth(Values.Imagen0_5X());
+    }
+    public static void tamanioimagen08(ImageView imagen){
+        imagen.setFitHeight(Values.Imagen0_8Y());
+        imagen.setFitWidth(Values.Imagen0_8X());
+    }
 
 }
 

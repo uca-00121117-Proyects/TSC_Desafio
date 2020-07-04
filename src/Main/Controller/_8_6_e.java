@@ -22,7 +22,7 @@ public class _8_6_e implements Initializable {
     String fxmlprev = fxmlp.getdatos();
     fxmlvalues fxmlt = fxmlvalues._8_6;
     String fxmlthis = fxmlt.getdatos();
-    fxmlvalues fxml = fxmlvalues._1;
+    fxmlvalues fxml = fxmlvalues._9;
     String fxmlnext = fxml.getdatos();
 
     //Rutas pantallas del menu

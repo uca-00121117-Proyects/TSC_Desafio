@@ -1,28 +1,17 @@
 package Main.Controller;
 
-import Main.Controller._3_controllers._3_1;
 import Main.Resources.Values.*;
-import com.sun.jdi.Value;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
-import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static Main.Resources.Values.retweet.nuevaScena;
 import static Main.Resources.Values.retweet.*;
-import static Main.Resources.Values.routes.r_3_1;
 
 
 public class _3_DomainController implements Initializable {
