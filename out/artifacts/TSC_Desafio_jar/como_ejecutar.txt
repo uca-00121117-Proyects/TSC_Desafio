@@ -1,0 +1,3 @@
+java --module-path /home/drubiknight/javafx-sdk-14.0.1/lib  --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.web -jar TSC-Desafio.jar
+
+https://www.youtube.com/watch?v=HGHu-SzL-5E&feature=youtu.be
