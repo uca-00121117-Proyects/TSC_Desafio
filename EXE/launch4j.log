@@ -1,0 +1,29 @@
+
+
+Version:	3.12
+CmdLine:	D:\Dru-Github\00121117-uca\TSC_Desafio_00121117\EXE\00121117.exe --l4j-debug
+WOW64:		yes
+Working dir:	D:\Dru-Github\00121117-uca\TSC_Desafio_00121117\EXE\.
+Java min ver:	1.008.000
+Java max ver:	
+64-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+32-bit search:	SOFTWARE\JavaSoft\Java Runtime Environment...
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8
+Check launcher:	C:\Program Files (x86)\Java\jre1.8.0_251\bin\javaw.exe (OK)
+Match:		1.008.000
+Check:		SOFTWARE\JavaSoft\Java Runtime Environment\1.8.0_251
+Check launcher:	C:\Program Files (x86)\Java\jre1.8.0_251\bin\javaw.exe (OK)
+Match:		1.008.000_251
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+32-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+64-bit search:	SOFTWARE\JavaSoft\JRE...
+32-bit search:	SOFTWARE\JavaSoft\JRE...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\14.0.1
+Check launcher:	C:\Program Files\Java\jdk-14.0.1\bin\javaw.exe (OK)
+Match:		1.014.000_001
+Runtime used:	1.014.000_001 (64-bit)
+Launcher:	C:\Program Files\Java\jdk-14.0.1\bin\javaw.exe
+Launcher args:	--module-path C:\Users\drubi\Downloads\openjfx-11.0.2_windows-x64_bin-sdk\javafx-sdk-11.0.2\lib --add-modules javafx.controls,javafx.fxml --add-exports javafx.graphics/com.sun.javafx.sg.prism=ALL-UNNAMED -jar "D:\Dru-Github\00121117-uca\TSC_Desafio_00121117\EXE\00121117.exe"
+Args length:	275/32768 chars
+Exit code:	0

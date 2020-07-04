@@ -6,7 +6,8 @@
         <option name="appClass" value="Main.Main" />
         <option name="description" value="" />
         <option name="htmlPlaceholderId" value="" />
-        <option name="title" value="" />
+        <option name="nativeBundle" value="all" />
+        <option name="title" value="00121117" />
         <option name="vendor" value="" />
         <option name="version" value="" />
       </options>
@@ -15,6 +16,7 @@
       <element id="archive" name="TSC_Desafio.jar">
         <element id="module-output" name="TSC_Desafio" />
       </element>
+      <element id="library" level="project" name="lib1" />
     </root>
   </artifact>
 </component>

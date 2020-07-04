@@ -23,6 +23,8 @@ public class Main extends Application {
         System.out.println( "********\t\t\tIniciando la app\t\t\t********");
         Parent root = FXMLLoader.load(getClass().getResource("Resources/fxml/"+ fxmlthis+".fxml"));
         index.initStyle(StageStyle.UNDECORATED);
+        index.setMaximized(true);
+//        index.setFullScreen(true);
         index.getIcons().add(new Image("/Main/Resources/images/icons/icon.png"));
         Scene scene =new Scene(root, Values.AppWidht(), Values.AppHeight());
         scene.getStylesheets().add("/Main/Resources/css/style.css");
